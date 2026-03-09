@@ -46,6 +46,10 @@ box-shadow:0 2px 10px rgba(0,0,0,0.2);
 
 }
 
+.logo{
+height:35px;
+}
+
 .logo-inacinha{
 
 color:#ff4d6d;
@@ -240,3 +244,4 @@ text-decoration:none;
 
 
 }
+
