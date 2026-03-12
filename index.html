@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="logo.png">
 <title>Inacinha Acessórios</title>
 
 <link rel="stylesheet" href="style.css">
@@ -40,11 +39,24 @@
 
 </section>
 
+<section class="categorias">
+<button class="categoria-btn ativo" data-categoria="todos">Todos</button>
+<button class="categoria-btn" data-categoria="maquiagem">Maquiagem</button>
+<button class="categoria-btn" data-categoria="bolsas">Bolsas</button>
+<button class="categoria-btn" data-categoria="joias">Joias</button>
+<button class="categoria-btn" data-categoria="perfumes">Perfumes</button>
+<button class="categoria-btn" data-categoria="eletronicos">Eletronicos</button>
+<button class="categoria-btn" data-categoria="utilidades">Utilidades</button>
+<button class="categoria-btn" data-categoria="acessorios">Acessorios</button>
+</section>
+
 
 <section class="produtos" id="produtos">
 
 
-<div class="card">
+<!-- Para controlar manualmente cada item, use data-categoria no card -->
+<!-- Exemplo: <div class="card" data-categoria="maquiagem"> -->
+<div class="card" data-categoria="maquiagem">
 
 <img src="img/paletasombra.jfif" alt="">
 
@@ -271,8 +283,8 @@ Comprar
         
 </div>
 
-<div class="card">
-
+<div class="card" data-categoria="bolsas">
+    
     <img src="img/capivara.jfif" alt="">
         
     <h3>Necessárie capivara</h3>
@@ -466,7 +478,7 @@ Comprar
         
 </div>
 
-<div class="card">
+<div class="card" data-categoria="joias">
 
     <img src="img/tornozeleirafoleada.jfif" alt="">
         
@@ -616,7 +628,7 @@ Comprar
         
 </div>
 
-<div class="card">
+<div class="card" data-categoria="bolsas">
 
     <img src="img/rosabolsa.jfif" alt="">
         
@@ -1070,6 +1082,30 @@ Comprar
 
 </section>
 
+<button id="cart-fab" class="cart-fab" aria-label="Abrir carrinho">
+🛒 <span id="cart-count">0</span>
+</button>
+
+<div id="cart-panel" class="cart-panel" aria-hidden="true">
+<div class="cart-header">
+<h3>Seu carrinho</h3>
+<button id="cart-close" class="cart-close" aria-label="Fechar carrinho">✕</button>
+</div>
+
+<div id="cart-items" class="cart-items">
+<p class="cart-empty">Seu carrinho está vazio.</p>
+</div>
+
+<p class="cart-total">Total: <strong id="cart-total-value">R$ 0,00</strong></p>
+
+<label for="client-name" class="cart-label">Seu nome</label>
+<input id="client-name" class="cart-input" type="text" placeholder="Digite seu nome">
+
+<button id="send-order" class="cart-send">Enviar pedido no WhatsApp</button>
+</div>
+
+<div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+
 
 <a class="whatsapp" href="https://wa.me/5534999468554">
 💬 WhatsApp
@@ -1080,11 +1116,6 @@ Comprar
 </body>
 
 </html>
-
-
-
-
-
 
 
 
