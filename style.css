@@ -88,13 +88,32 @@ padding:15px;
 
 }
 
+.busca-linha{
+display:flex;
+gap:8px;
+align-items:center;
+}
+
 .busca input{
 
-width:100%;
+flex:1;
 padding:12px;
 border-radius:10px;
 border:none;
 
+}
+
+.toggle-categorias{
+width:44px;
+height:44px;
+border:none;
+border-radius:10px;
+background:#e60023;
+color:#fff;
+font-size:24px;
+line-height:1;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(230,0,35,0.25);
 }
 
 .categorias{
@@ -102,6 +121,11 @@ padding:0 15px 15px;
 display:flex;
 gap:8px;
 flex-wrap:wrap;
+transition:all 0.2s ease;
+}
+
+.categorias.categorias-fechada{
+display:none;
 }
 
 .categoria-btn{
