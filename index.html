@@ -34,12 +34,16 @@
 </section>
 
 <section class="busca">
-
+<div class="busca-linha">
 <input type="text" id="search" placeholder="Buscar produto...">
+<button id="toggle-categorias" class="toggle-categorias" aria-label="Abrir filtros de categoria">
+⋯
+</button>
+</div>
 
 </section>
 
-<section class="categorias">
+<section class="categorias categorias-fechada" id="categorias">
 <button class="categoria-btn ativo" data-categoria="todos">Todos</button>
 <button class="categoria-btn" data-categoria="maquiagem">Maquiagem</button>
 <button class="categoria-btn" data-categoria="bolsas">Bolsas</button>
