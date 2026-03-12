@@ -1,4 +1,6 @@
 const search = document.getElementById("search");
+const toggleCategoriasBtn = document.getElementById("toggle-categorias");
+const categoriasContainer = document.getElementById("categorias");
 const botoesCategoria = document.querySelectorAll(".categoria-btn");
 const produtos = document.querySelectorAll(".card");
 const cartFab = document.getElementById("cart-fab");
@@ -221,6 +223,10 @@ function enviarPedidoWhatsApp() {
 
 search?.addEventListener("keyup", filtrarProdutos);
 
+toggleCategoriasBtn?.addEventListener("click", () => {
+  categoriasContainer?.classList.toggle("categorias-fechada");
+});
+
 botoesCategoria.forEach((botao) => {
   botao.addEventListener("click", () => {
     categoriaSelecionada = botao.dataset.categoria || "todos";
@@ -229,6 +235,9 @@ botoesCategoria.forEach((botao) => {
     botao.classList.add("ativo");
 
     filtrarProdutos();
+
+    // Em mobile, fecha os filtros ao escolher uma categoria.
+    categoriasContainer?.classList.add("categorias-fechada");
   });
 });
 
